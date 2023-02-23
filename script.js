@@ -1,13 +1,13 @@
 function getRandomOption(arr) {
 
-  const randomIndex = Math.floor(Math.random() * arr.length);
+  let randomIndex = Math.floor(Math.random() * arr.length);
 
-  const option = arr[randomIndex];
+  let option = arr[randomIndex];
 
   return option;
 }
 
-const options = ['paper', 'rock', 'scissors'];
+let options = ['paper', 'rock', 'scissors'];
 
-const computer_option = getRandomOption(options);
+let computer_option = getRandomOption(options);
 console.log(computer_option);
