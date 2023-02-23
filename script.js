@@ -1,13 +1,17 @@
-function getRandomOption(arr) {
+function getUserOption() {
+  let userOption = prompt("Choose ONE between, Rock, Paper, Scissors");
+  console.log("Your choose was:" + " " + userOption);
+}
+
+getUserOption();
+
+function getPcOption(arr) {
 
   let randomIndex = Math.floor(Math.random() * arr.length);
-
   let option = arr[randomIndex];
-
   return option;
 }
 
-let options = ['paper', 'rock', 'scissors'];
-
-let computer_option = getRandomOption(options);
-console.log(computer_option);
+let options = ['Paper', 'Rock', 'Scissors'];
+let computer_option = getPcOption(options);
+console.log("The computer choose was:" + " " + computer_option);
