@@ -1,3 +1,5 @@
+for (count = 0; count <5; count++) {
+
 function getUserOption() {
   let userOption = prompt("Choose ONE between, Rock, Paper, Scissors");
   console.log("Your choose was:" + " " + userOption);
@@ -15,3 +17,5 @@ function getPcOption(arr) {
 let options = ['Paper', 'Rock', 'Scissors'];
 let computer_option = getPcOption(options);
 console.log("The computer choose was:" + " " + computer_option);
+
+}
