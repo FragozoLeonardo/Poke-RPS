@@ -18,7 +18,7 @@ let options = ['Paper', 'Rock', 'Scissors'];
 let computerOption = getPcOption(options);
 console.log("The computer choose was:" + " " + computerOption);
 
-getPcOption();
+getPcOption(op);
 
 function playGame(userOption, computerOption) {
   let log = '';
