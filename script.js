@@ -1,3 +1,6 @@
+let playerScore = 0;
+let computerScore = 0;
+
 for (count = 0; count <5; count++) {
 
 function getUserOption() {
@@ -21,34 +24,55 @@ console.log("The computer choose was:" + " " + computerOption);
 getPcOption(options);
 
 function playGame(userOption, computerOption) {
-  let log = '';
 
-  if (userOption === 'Rock') {
-    if (computerOption === 'Paper') {
+    if (userOption === 'Rock' && computerOption === 'Paper') {
       console.log ("You Lose! Paper beats Rock");
-    } else if (computerOption === 'Scissors') {
+      computerScore +=1;
+    }
+
+    else if (userOption === 'Rock' && computerOption === 'Scissors') {
       console.log ("You Win! Rock beats Scissors");
-    } else {
-      console.log ("It's a tie");
+      playerScore +=1;
     }
-  } else if (userOption === 'Paper') {
-    if (computerOption === 'Scissors') {
+
+     else if (computerOption === 'Rock' && userOption === 'Rock' )  {
+      console.log ("It's a tie");
+      playerScore +=1;
+      computerScore +=1;
+    }
+
+    else if (computerOption === 'Scissors' && userOption === 'Paper' ) {
       console.log ("You Lose! Scissors beats Paper");
-    } else if (computerOption === 'Rock') {
-      console.log ("You Win! Paper beats Rock");
-    } else {
-      console.log ("It's a tie");
-    }
-  } else if (userOption === 'Scissors') {
-    if (computerOption === 'Rock') {
-      console.log ("You Lose! Rock beats Scissors");
-    } else if (computerOption === 'Paper') {
-      console.log ("You Win! Scissors beats Paper");
-    } else {
-      console.log("It's a tie");
+      computerScore +=1;
       }
+
+    else if (userOption === 'Paper' && computerOption === 'Rock') {
+      console.log ("You Win! Paper beats Rock");
+      playerScore +=1;
     }
-    console.log("The result is ");
+
+    else if (computerOption === 'Scissors' && userOption === 'Scissors' )  {
+      console.log ("It's a tie");
+      playerScore +=1;
+      computerScore +=1;
+    }
+
+   else if (userOption === 'Scissors' && computerOption === 'Rock' ) {
+      console.log ("You Lose! Rock beats Scissors");
+      computerScore +=1;
+    }
+
+    else if (userOption === 'Scissors' && computerOption === 'Paper') {
+      console.log ("You Win! Scissors beats Paper");
+      playerScore +=1;
+    }
+
+    else if (userOption === 'Scissors' && computerOption === 'Paper')  {
+      console.log("It's a tie");
+      playerScore +=1;
+      computerScore +=1;
+    }
+    console.log("The result is: Player: " +playerScore + " Points, Computer: " +computerScore + " Points");
   }
   playGame();
 }
