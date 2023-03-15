@@ -4,7 +4,7 @@ let computerScore = 0;
 for (count = 0; count <5; count++) {
 
   function getUserOption() {
-    let userOption = prompt("Choose ONE between, Rock, Paper, Scissors");
+    let userOption = prompt("Choose ONE between, Grass, Fire, Water");
     console.log("Your choose was:" + " " + userOption);
     return userOption;
   }
@@ -17,62 +17,62 @@ for (count = 0; count <5; count++) {
     return option;
   }
 
-  let options = ['Paper', 'Rock', 'Scissors'];
-  let computerOption = getPcOption(options);
-  console.log("The computer choose was:" + " " + computerOption);
+let options = ['Grass', 'Fire', 'Water'];
+let computerOption = getPcOption(options);
+console.log("The computer choose was:" + " " + computerOption);
 
-  function playGame(userOption, computerOption) {
+function playGame(userOption, computerOption) {
 
-      if (userOption === 'Rock' && computerOption === 'Paper') {
-        console.log ("You Lose! Paper beats Rock");
-        computerScore +=1;
-      }
-
-      else if (userOption === 'Rock' && computerOption === 'Scissors') {
-        console.log ("You Win! Rock beats Scissors");
-        playerScore +=1;
-      }
-
-      else if (computerOption === 'Rock' && userOption === 'Rock' )  {
-        console.log ("It's a tie");
-        playerScore +=1;
-        computerScore +=1;
-      }
-
-      else if (computerOption === 'Scissors' && userOption === 'Paper' ) {
-        console.log ("You Lose! Scissors beats Paper");
-        computerScore +=1;
-        }
-
-      else if (userOption === 'Paper' && computerOption === 'Rock') {
-        console.log ("You Win! Paper beats Rock");
-        playerScore +=1;
-      }
-
-      else if (computerOption === 'Scissors' && userOption === 'Scissors' )  {
-        console.log ("It's a tie");
-        playerScore +=1;
-        computerScore +=1;
-      }
-
-      else if (userOption === 'Scissors' && computerOption === 'Rock' ) {
-        console.log ("You Lose! Rock beats Scissors");
-        computerScore +=1;
-      }
-
-      else if (userOption === 'Scissors' && computerOption === 'Paper') {
-        console.log ("You Win! Scissors beats Paper");
-        playerScore +=1;
-      }
-
-      else if (userOption === 'Paper' && computerOption === 'Paper')  {
-        console.log("It's a tie");
-        playerScore +=1;
-        computerScore +=1;
-      }
-
-      console.log("The result is: Player: " +playerScore + " Points, Computer: " +computerScore + " Points");
+    if (userOption === 'Grass' && computerOption === 'Water') {
+      console.log ("You Win! Grass beats Water");
+      computerScore +=1;
     }
+
+    else if (userOption === 'Grass' && computerOption === 'Fire') {
+      console.log ("You Lose! Fire beats Grass");
+      playerScore +=1;
+    }
+
+    else if (computerOption === 'Grass' && userOption === 'Grass' )  {
+      console.log ("It's a tie");
+      playerScore +=1;
+      computerScore +=1;
+    }
+
+    else if (computerOption === 'Fire' && userOption === 'Grass' ) {
+      console.log ("You Win! Fire beats Grass");
+      computerScore +=1;
+      }
+
+    else if (userOption === 'Fire' && computerOption === 'Water') {
+      console.log ("You Lose! Water beats Fire");
+      playerScore +=1;
+    }
+
+    else if (computerOption === 'Fire' && userOption === 'Fire' )  {
+      console.log ("It's a tie");
+      playerScore +=1;
+      computerScore +=1;
+    }
+
+    else if (userOption === 'Water' && computerOption === 'Grass' ) {
+      console.log ("You Lose! Grass beats Water");
+      computerScore +=1;
+    }
+
+    else if (userOption === 'Water' && computerOption === 'Fire') {
+      console.log ("You Win! Water beats Fire");
+      playerScore +=1;
+    }
+
+    else if (userOption === 'Water' && computerOption === 'Water')  {
+      console.log("It's a tie");
+      playerScore +=1;
+      computerScore +=1;
+    }
+
+    console.log("The result is: Player: " +playerScore + " Points, Computer: " +computerScore + " Points");
+  }
 
   playGame(userOption, computerOption);
 }

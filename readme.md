@@ -1,1 +1,1 @@
-This is the odin project's foundations rock paper scissors project.
+This is pokémon based (grass, fire and water) version of the odin project's foundations rock paper scissors project.
