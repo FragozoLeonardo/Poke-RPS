@@ -1,1 +1,1 @@
-This is pokémon based (grass, fire and water) version of the odin project's foundations rock paper scissors project, this project uses DOM manipulation for the styling.
+This is a pokémon based (grass, fire and water) version of the odin project's foundations rock paper scissors project. .
