@@ -1,0 +1,45 @@
+@import url('https://fonts.googleapis.com/css2?family=Kalam&display=swap');
+
+.text-choose,#btn-grass,#btn-fire,#btn-water,.gameText{
+  font-family: Kalam;
+}
+
+.text-choose,.game-text {
+  margin-top: 5%;
+  font-size: 48px;
+}
+
+.btn-group,.text-choose{
+  display: flex;
+  justify-content: center;
+}
+
+.gameText{
+  margin-top: 5%;
+  margin-left: 20%;
+}
+
+.btn-group {
+  gap: 20px;
+  width: 100%;
+}
+
+#btn-grass,#btn-fire,#btn-water{
+  margin-top: 10%;
+  font-size: 28px;
+  width: 20%;
+  padding: 10px;
+  color: #FFFFFF;
+}
+
+#btn-grass {
+  background-color: #006400;
+}
+
+#btn-fire {
+  background-color: #FF0000;
+}
+
+#btn-water {
+  background-color: #0000FF;
+}

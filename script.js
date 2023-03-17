@@ -1,78 +1,68 @@
-let playerScore = 0;
-let computerScore = 0;
+const playerText = document.querySelector("#playerText");
+const computerText = document.querySelector("#computerText");
+const btngrass = document.querySelectorAll("#btn-grass");
+const btnfire = document.querySelectorAll("#btn-fire");
+const btnwater = document.querySelectorAll("#btn-water");
+let player;
+let computer;
+let result;
 
-for (count = 0; count <5; count++) {
+btngrass.forEach(button => button.addEventListener("click", () => {
 
-  function getUserOption() {
-    let userOption = prompt("Choose ONE between, Grass, Fire, Water");
-    console.log("Your choose was:" + " " + userOption);
-    return userOption;
-  }
+    player = button.textContent;
+    computerTurn();
+    playerText.textContent = `Player: ${player}`;
+    computerText.textContent = `Computer: ${computer}`;
+    resultText.textContent = checkWinner();
+}));
 
-  let userOption = getUserOption();
+btnfire.forEach(button => button.addEventListener("click", () => {
 
-  function getPcOption(arr) {
-    let randomIndex = Math.floor(Math.random() * arr.length);
-    let option = arr[randomIndex];
-    return option;
-  }
+  player = button.textContent;
+  computerTurn();
+  playerText.textContent = `Player: ${player}`;
+  computerText.textContent = `Computer: ${computer}`;
+  resultText.textContent = checkWinner();
+}));
 
-let options = ['Grass', 'Fire', 'Water'];
-let computerOption = getPcOption(options);
-console.log("The computer choose was:" + " " + computerOption);
 
-function playGame(userOption, computerOption) {
+btnwater.forEach(button => button.addEventListener("click", () => {
 
-    if (userOption === 'Grass' && computerOption === 'Water') {
-      console.log ("You Win! Grass beats Water");
-      computerScore +=1;
+  player = button.textContent;
+  computerTurn();
+  playerText.textContent = `Player: ${player}`;
+  computerText.textContent = `Computer: ${computer}`;
+  resultText.textContent = checkWinner();
+}));
+
+
+function computerTurn(){
+
+    const randNum = Math.floor(Math.random() * 3) + 1;
+
+    switch(randNum){
+      case 1:
+        computer = "Grass";
+        break;
+      case 2:
+        computer = "Fire";
+        break;
+      case 3:
+        computer = "Water";
+        break;
     }
-
-    else if (userOption === 'Grass' && computerOption === 'Fire') {
-      console.log ("You Lose! Fire beats Grass");
-      playerScore +=1;
+}
+function checkWinner(){
+    if(player == computer){
+      return "Draw!";
     }
-
-    else if (computerOption === 'Grass' && userOption === 'Grass' )  {
-      console.log ("It's a tie");
-      playerScore +=1;
-      computerScore +=1;
+    else if(computer == "Grass"){
+      return (player == "Fire") ? "You Win!" : "You Lose!"
     }
-
-    else if (computerOption === 'Fire' && userOption === 'Grass' ) {
-      console.log ("You Win! Fire beats Grass");
-      computerScore +=1;
-      }
-
-    else if (userOption === 'Fire' && computerOption === 'Water') {
-      console.log ("You Lose! Water beats Fire");
-      playerScore +=1;
+    else if(computer == "Fire"){
+      return (player == "Water") ? "You Win!" : "You Lose!"
     }
-
-    else if (computerOption === 'Fire' && userOption === 'Fire' )  {
-      console.log ("It's a tie");
-      playerScore +=1;
-      computerScore +=1;
+    else if(computer == "Water"){
+      return (player == "Grass") ? "You Win!" : "You Lose!"
     }
-
-    else if (userOption === 'Water' && computerOption === 'Grass' ) {
-      console.log ("You Lose! Grass beats Water");
-      computerScore +=1;
-    }
-
-    else if (userOption === 'Water' && computerOption === 'Fire') {
-      console.log ("You Win! Water beats Fire");
-      playerScore +=1;
-    }
-
-    else if (userOption === 'Water' && computerOption === 'Water')  {
-      console.log("It's a tie");
-      playerScore +=1;
-      computerScore +=1;
-    }
-
-    console.log("The result is: Player: " +playerScore + " Points, Computer: " +computerScore + " Points");
-  }
-
-  playGame(userOption, computerOption);
 }
