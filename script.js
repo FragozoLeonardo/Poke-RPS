@@ -9,7 +9,7 @@ let result;
 
 btngrass.forEach(button => button.addEventListener("click", () => {
 
-    player = button.textContent;
+    player = "Grass";
     computerTurn();
     playerText.textContent = `Player: ${player}`;
     computerText.textContent = `Computer: ${computer}`;
@@ -18,23 +18,21 @@ btngrass.forEach(button => button.addEventListener("click", () => {
 
 btnfire.forEach(button => button.addEventListener("click", () => {
 
-  player = button.textContent;
+  player = "Fire";
   computerTurn();
   playerText.textContent = `Player: ${player}`;
   computerText.textContent = `Computer: ${computer}`;
   resultText.textContent = checkWinner();
 }));
-
 
 btnwater.forEach(button => button.addEventListener("click", () => {
 
-  player = button.textContent;
+  player = "Water";
   computerTurn();
   playerText.textContent = `Player: ${player}`;
   computerText.textContent = `Computer: ${computer}`;
   resultText.textContent = checkWinner();
 }));
-
 
 function computerTurn(){
 
