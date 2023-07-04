@@ -1,4 +1,4 @@
-[![Screenshot-from-2023-04-13-09-50-15.png](https://i.postimg.cc/TwQ5H94m/Screenshot-from-2023-04-13-09-50-15.png)](https://postimg.cc/zbbfyn5X)
+[![Screenshot-from-2023-04-13-09-50-15.png](https://i.postimg.cc/44HZ1sLq/Screenshot-from-2023-04-13-09-50-15.png)](https://postimg.cc/zbbfyn5X)
 
 # Pokémon RPS
 
