@@ -1,4 +1,4 @@
-[![Screenshot-from-2023-04-13-09-50-15.png](https://i.postimg.cc/44HZ1sLq/Screenshot-from-2023-04-13-09-50-15.png)](https://postimg.cc/zbbfyn5X)
+[![68747470733a2f2f692e706f7374696d672e63632f547751354839346d2f53637265656e73686f742d66726f6d2d32303233.png](https://i.postimg.cc/jdMCspFm/68747470733a2f2f692e706f7374696d672e63632f547751354839346d2f53637265656e73686f742d66726f6d2d32303233.png)](https://postimg.cc/tYV9kMyN)
 
 # Pokémon RPS
 
